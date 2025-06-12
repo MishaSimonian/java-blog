@@ -5,34 +5,97 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Misha's Java Blog</title>
-  <!-- Google Fonts: Roboto -->
+  <!-- Roboto font and main stylesheet -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
-  <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css">
+  <!-- Responsive and minimalist design, see comments below for structure -->
 </head>
 
 <body>
   <div class="container">
+    <!-- Centered header with Java icon, title, subtitle -->
     <header>
-      <!-- Java icon with animation using user's SVG file -->
       <div class="java-icon" aria-label="Java logo">
         <img src="java-svgrepo-com.svg" class="java-svg" alt="Java logo" />
       </div>
       <h1 class="blog-title">Misha's Java Blog</h1>
-      <p class="blog-subtitle">From medicine to coding</p>
-      <!-- Language switcher: links to other language versions -->
+      <p class="blog-subtitle">Learn Java from scratch with tutorials</p>
+      <!-- Language switcher styled as .lang-switcher -->
       <nav class="lang-switcher" aria-label="Language switcher">
         <a href="index_sk.html">SK</a>
         <a href="index_en.html">EN</a>
         <a href="index_ru.html">RU</a>
       </nav>
     </header>
-    <main>
-      <!-- Main English content as default -->
-      <!--#include file="posts/en/java-basics-for-beginners.html" -->
-      <!--#include file="posts/en/upcoming-topics.html" -->
+    <main style="text-align:center; margin-top:32px;">
+      <!-- Welcome message -->
+      <section class="post" style="border:none; box-shadow:none;">
+        <h2 style="font-size:1.5rem; font-weight:500; margin-bottom:16px;">Welcome to my Java learning journey!</h2>
+        <p style="font-size:1.1rem; color:var(--java-gray); margin-bottom:28px;">
+          Explore beginner-friendly tutorials in your language.
+        </p>
+        <!-- Call-to-action button -->
+        <a href="index_en.html" class="start-btn">Start Learning</a>
+      </section>
     </main>
   </div>
+  <style>
+    /* Call-to-action button style */
+    .start-btn {
+      display: inline-block;
+      background: var(--java-blue);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.08rem;
+      font-weight: 500;
+      margin-top: 8px;
+      transition: background 0.2s;
+    }
+
+    .start-btn:hover {
+      background: var(--java-orange);
+      color: #fff;
+    }
+
+    /* Responsive adjustments for mobile */
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px !important;
+      }
+
+      .blog-title {
+        font-size: 1.2rem;
+      }
+
+      .blog-subtitle {
+        font-size: 0.88rem;
+      }
+
+      .post h2 {
+        font-size: 1.1rem !important;
+      }
+
+      .post p {
+        font-size: 0.88rem !important;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .java-svg {
+        width: 40px !important;
+        height: 40px !important;
+      }
+    }
+  </style>
+  <!--
+    Structure:
+    - Centered header with animated Java icon, title, subtitle, and language switcher.
+    - Main section with welcome message and prominent call-to-action button.
+    - Responsive: font sizes and paddings reduced on mobile, Java icon shrinks to 40px below 400px.
+    - Uses existing CSS variables and style.css for consistency.
+  -->
 </body>
 
 </html>

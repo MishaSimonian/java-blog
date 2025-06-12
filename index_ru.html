@@ -15,61 +15,93 @@
       <div class="java-icon" aria-label="Java logo">
         <img src="java-svgrepo-com.svg" class="java-svg" alt="Java logo" />
       </div>
-      <h1 class="blog-title">Java блог Миши</h1>
+      <h1 class="blog-title"><a href="index.html">Java блог Миши</a></h1>
       <p class="blog-subtitle">От медицины к программированию</p>
       <nav class="lang-switcher" aria-label="Language switcher">
         <a href="index_sk.html">SK</a>
         <a href="index_en.html">EN</a>
         <a href="index_ru.html">RU</a>
       </nav>
-      <nav class="main-nav" aria-label="Главная навигация">
-        <a href="#tutorials">Уроки</a> | <a href="#upcoming">Следующие темы</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#tutorials">Уроки</a>
+        <a href="#upcoming">Следующие темы</a>
       </nav>
     </header>
     <main>
-      <!-- Раздел: Туториал -->
-      <section class="post">
+      <!-- Основы Java для начинающих -->
+      <section class="post" id="tutorials">
         <h2 class="post-title">Основы Java для начинающих</h2>
-        <p class="post-desc">Введение в основы программирования на Java для новых разработчиков.</p>
+        <p class="post-desc">Краткое и понятное введение в программирование на Java для новичков.</p>
         <div class="tutorial-content">
           <h3>Что такое Java?</h3>
-          <p>Java — популярный язык программирования для создания приложений, сайтов и многого другого. Он известен
-            своей простотой и надежностью.</p>
+          <p>Java — это популярный и универсальный язык программирования для создания приложений, сайтов и многого
+            другого. Он прост в освоении, надёжен и работает на разных платформах.</p>
           <h3>Установка Java</h3>
-          <p>Для начала скачайте и установите JDK (Java Development Kit) с официального сайта. Шаги:</p>
           <ul>
-            <li>Перейдите на <a href="https://www.oracle.com/java/technologies/javase-downloads.html"
-                target="_blank">Oracle JDK</a>.</li>
-            <li>Выберите версию для вашей ОС (Windows, Mac, Linux).</li>
-            <li>Установите и настройте переменную среды JAVA_HOME.</li>
+            <li>Скачайте Java Development Kit (JDK) с <a
+                href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank">официального сайта
+                Oracle</a>.</li>
+            <li>Выберите версию для вашей операционной системы (Windows, Mac или Linux).</li>
+            <li>Установите JDK и задайте переменную среды <code>JAVA_HOME</code>.</li>
+            <li>Проверьте установку командой <code>java -version</code> в терминале или командной строке.</li>
           </ul>
           <h3>Ваша первая программа</h3>
-          <p>Вот простой пример "Hello World" на Java:</p>
-          <pre><code>
-public class HelloWorld {
+          <p>Напишем простую программу “Hello World” на Java:</p>
+          <pre><code>public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
-}
-          </code></pre>
-          <p><strong>Совет:</strong> Начинайте с небольших программ для уверенности. Попробуйте на <a
-              href="https://www.jdoodle.com/online-java-compiler/" target="_blank">JDoodle</a>!</p>
+}</code></pre>
+          <a href="https://www.jdoodle.com/online-java-compiler/" target="_blank" class="try-btn">Попробовать онлайн</a>
+          <p><strong>Совет:</strong> Начинайте с простых программ и практикуйтесь чаще. Не бойтесь экспериментировать!
+          </p>
         </div>
-        <p class="post-date">Опубликовано: 12 июня 2025</p>
       </section>
-      <!-- Раздел: Предстоящие темы -->
-      <section class="post">
-        <h2 class="post-title">Предстоящие темы</h2>
+      <!-- Следующие темы -->
+      <section class="post" id="upcoming">
+        <h2 class="post-title">Следующие темы</h2>
         <ul>
-          <li>Java Collections: Работа с данными в списках и отображениях.</li>
-          <li>Основы NIO: Работа с файлами и вводом/выводом.</li>
-          <li>Введение в Spring Boot: Создание веб-приложений.</li>
+          <li><strong>Коллекции Java:</strong> Работа с данными с помощью списков и карт</li>
+          <li><strong>Основы NIO:</strong> Современная работа с файлами и данными в Java</li>
+          <li><strong>Введение в Spring Boot:</strong> Лёгкая разработка веб-приложений</li>
         </ul>
-        <p>Предложите свою тему в <a href="https://github.com/MishaSimonian/java-blog/issues" target="_blank">GitHub
-            Issues</a>!</p>
+        <p>Хотите предложить тему? <a href="https://github.com/MishaSimonian/java-blog/issues" target="_blank">Оставьте
+            предложение на GitHub Issues</a>.</p>
       </section>
     </main>
   </div>
+  <style>
+    /* Try It Yourself button style */
+    .try-btn {
+      display: inline-block;
+      background: #007aff;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin: 12px 0 8px 0;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .try-btn:hover {
+      background: #005bb5;
+    }
+
+    @media (max-width: 400px) {
+      .java-svg {
+        width: 20px !important;
+        height: 20px !important;
+      }
+    }
+  </style>
+  <!--
+    Изменения:
+    - Добавлено главное меню .main-nav.
+    - Улучшена структура урока с подзаголовками, шагами, кодом и кнопкой "Попробовать онлайн".
+    - Секция "Следующие темы" с краткими описаниями и ссылкой на GitHub Issues.
+    - Оптимизация иконки Java для мобильных.
+  -->
 </body>
 
 </html>

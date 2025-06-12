@@ -18,7 +18,7 @@
       <div class="java-icon" aria-label="Java logo">
         <img src="java-svgrepo-com.svg" class="java-svg" alt="Java logo" />
       </div>
-      <h1 class="blog-title">Misha's Java Blog</h1>
+      <h1 class="blog-title"><a href="index.html">Misha's Java Blog</a></h1>
       <p class="blog-subtitle">From medicine to coding</p>
       <!-- Language switcher: links to other language versions -->
       <nav class="lang-switcher" aria-label="Language switcher">
@@ -27,57 +27,87 @@
         <a href="index_ru.html">RU</a>
       </nav>
       <nav class="main-nav" aria-label="Main navigation">
-        <a href="#tutorials">Tutorials</a> | <a href="#upcoming">Next Topics</a>
+        <a href="#tutorials">Tutorials</a>
+        <a href="#upcoming">Upcoming Topics</a>
       </nav>
     </header>
     <main>
-      <!-- Tutorial section -->
-      <section class="post">
+      <!-- Java Basics for Beginners Tutorial -->
+      <section class="post" id="tutorials">
         <h2 class="post-title">Java Basics for Beginners</h2>
-        <p class="post-desc">An introduction to the fundamentals of Java programming for new developers.</p>
+        <p class="post-desc">A concise introduction to Java programming for absolute beginners.</p>
         <div class="tutorial-content">
           <h3>What is Java?</h3>
-          <p>Java is a popular programming language used for building apps, websites, and more. It’s known for its
-            simplicity and reliability.</p>
-
+          <p>Java is a popular, versatile programming language used to build applications, websites, and more. Its
+            simplicity, reliability, and cross-platform capabilities make it a great choice for beginners and
+            professionals alike.</p>
           <h3>Setting Up Java</h3>
-          <p>To start, download and install the JDK (Java Development Kit) from the official website. Follow these
-            steps:</p>
           <ul>
-            <li>Visit <a href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank">Oracle
+            <li>Download the Java Development Kit (JDK) from <a
+                href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank">Oracle
                 JDK</a>.</li>
-            <li>Choose the version for your OS (Windows, Mac, Linux).</li>
-            <li>Install and set the JAVA_HOME environment variable.</li>
+            <li>Choose the version for your operating system (Windows, Mac, or Linux).</li>
+            <li>Install the JDK and set the <code>JAVA_HOME</code> environment variable.</li>
+            <li>Verify installation by running <code>java -version</code> in your terminal or command prompt.</li>
           </ul>
-
           <h3>Your First Program</h3>
-          <p>Here’s a simple “Hello World” example:</p>
-          <pre><code>
-public class HelloWorld {
+          <p>Let’s write a simple “Hello World” program in Java:</p>
+          <pre><code>public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
-}
-      </code></pre>
-          <p><strong>Tip:</strong> Start with small programs to build confidence. Try it on <a
-              href="https://www.jdoodle.com/online-java-compiler/" target="_blank">JDoodle</a>!</p>
+}</code></pre>
+          <a href="https://www.jdoodle.com/online-java-compiler/" target="_blank" class="try-btn">Try It Yourself</a>
+          <p><strong>Tip:</strong> Start with small programs to build confidence. Practice regularly and don’t
+            hesitate to experiment!</p>
         </div>
-        <p class="post-date">Published: June 12, 2025</p>
       </section>
-
-      <!-- Upcoming Topics section -->
-      <section class="post">
+      <!-- Upcoming Topics Section -->
+      <section class="post" id="upcoming">
         <h2 class="post-title">Upcoming Topics</h2>
         <ul>
-          <li>Java Collections: Managing data with lists and maps.</li>
-          <li>NIO Basics: Working with files and I/O.</li>
-          <li>Introduction to Spring Boot: Building web apps.</li>
+          <li><strong>Java Collections:</strong> Managing data with lists and maps</li>
+          <li><strong>NIO Basics:</strong> Modern file and data handling in Java</li>
+          <li><strong>Introduction to Spring Boot:</strong> Building web applications easily</li>
         </ul>
-        <p>Suggest your topic in the <a href="https://github.com/MishaSimonian/java-blog/issues" target="_blank">GitHub
-            Issues</a>!</p>
+        <p>Want to see a specific topic? <a href="https://github.com/MishaSimonian/java-blog/issues"
+            target="_blank">Suggest
+            your topic on GitHub Issues</a>.</p>
       </section>
     </main>
   </div>
+  <style>
+    /* Try It Yourself button style */
+    .try-btn {
+      display: inline-block;
+      background: #007aff;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin: 12px 0 8px 0;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .try-btn:hover {
+      background: #005bb5;
+    }
+
+    @media (max-width: 400px) {
+      .java-svg {
+        width: 20px !important;
+        height: 20px !important;
+      }
+    }
+  </style>
+  <!--
+    Changes:
+    - Added .main-nav navigation menu styled like .lang-switcher.
+    - Improved tutorial structure with subheadings, steps, code, and a styled "Try It Yourself" button.
+    - Enhanced Upcoming Topics with brief descriptions and GitHub Issues link.
+    - Optimized Java icon for mobile.
+  -->
 </body>
 
 </html>

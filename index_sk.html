@@ -15,61 +15,93 @@
       <div class="java-icon" aria-label="Java logo">
         <img src="java-svgrepo-com.svg" class="java-svg" alt="Java logo" />
       </div>
-      <h1 class="blog-title">Misha's Java Blog</h1>
+      <h1 class="blog-title"><a href="index.html">Misha's Java Blog</a></h1>
       <p class="blog-subtitle">Od medicíny k programovaniu</p>
       <nav class="lang-switcher" aria-label="Language switcher">
         <a href="index_sk.html">SK</a>
         <a href="index_en.html">EN</a>
         <a href="index_ru.html">RU</a>
       </nav>
-      <nav class="main-nav" aria-label="Hlavná navigácia">
-        <a href="#tutorials">Tutoriály</a> | <a href="#upcoming">Ďalšie témy</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#tutorials">Tutoriály</a>
+        <a href="#upcoming">Pripravované témy</a>
       </nav>
     </header>
     <main>
-      <!-- Tutoriál -->
-      <section class="post">
-        <h2 class="post-title">Základy Javy pre začiatočníkov</h2>
-        <p class="post-desc">Úvod do základov programovania v Jave pre nových vývojárov.</p>
+      <!-- Základy Java pre začiatočníkov -->
+      <section class="post" id="tutorials">
+        <h2 class="post-title">Základy Java pre začiatočníkov</h2>
+        <p class="post-desc">Stručný a zrozumiteľný úvod do programovania v Jave pre úplných začiatočníkov.</p>
         <div class="tutorial-content">
           <h3>Čo je Java?</h3>
-          <p>Java je populárny programovací jazyk používaný na tvorbu aplikácií, webov a ďalších riešení. Je známy
-            svojou jednoduchosťou a spoľahlivosťou.</p>
+          <p>Java je populárny a univerzálny programovací jazyk na tvorbu aplikácií, webov a ďalších riešení. Je
+            jednoduchý na učenie, spoľahlivý a funguje na rôznych platformách.</p>
           <h3>Inštalácia Javy</h3>
-          <p>Začnite stiahnutím a inštaláciou JDK (Java Development Kit) z oficiálnej stránky. Postupujte takto:</p>
           <ul>
-            <li>Navštívte <a href="https://www.oracle.com/java/technologies/javase-downloads.html"
-                target="_blank">Oracle JDK</a>.</li>
-            <li>Vyberte verziu pre váš operačný systém (Windows, Mac, Linux).</li>
-            <li>Nainštalujte a nastavte premennú prostredia JAVA_HOME.</li>
+            <li>Stiahnite si Java Development Kit (JDK) z <a
+                href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank">oficiálnej stránky
+                Oracle</a>.</li>
+            <li>Vyberte verziu pre váš operačný systém (Windows, Mac alebo Linux).</li>
+            <li>Nainštalujte JDK a nastavte premennú prostredia <code>JAVA_HOME</code>.</li>
+            <li>Overte inštaláciu príkazom <code>java -version</code> v termináli alebo príkazovom riadku.</li>
           </ul>
           <h3>Váš prvý program</h3>
-          <p>Tu je jednoduchý príklad „Hello World“ v Jave:</p>
-          <pre><code>
-public class HelloWorld {
+          <p>Napíšme jednoduchý program “Hello World” v Jave:</p>
+          <pre><code>public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
-}
-          </code></pre>
-          <p><strong>Tip:</strong> Začnite s malými programami, aby ste získali istotu. Vyskúšajte si to na <a
-              href="https://www.jdoodle.com/online-java-compiler/" target="_blank">JDoodle</a>!</p>
+}</code></pre>
+          <a href="https://www.jdoodle.com/online-java-compiler/" target="_blank" class="try-btn">Vyskúšať online</a>
+          <p><strong>Tip:</strong> Začnite s malými programami a pravidelne skúšajte nové veci. Nebojte sa
+            experimentovať!</p>
         </div>
-        <p class="post-date">Publikované: 12. jún 2025</p>
       </section>
-      <!-- Sekcia: Pripravované témy -->
-      <section class="post">
+      <!-- Pripravované témy -->
+      <section class="post" id="upcoming">
         <h2 class="post-title">Pripravované témy</h2>
         <ul>
-          <li>Java Collections: Práca s dátami v zoznamoch a mapách.</li>
-          <li>Základy NIO: Práca so súbormi a vstupom/výstupom.</li>
-          <li>Úvod do Spring Boot: Tvorba webových aplikácií.</li>
+          <li><strong>Java Collections:</strong> Práca s dátami pomocou zoznamov a máp</li>
+          <li><strong>Základy NIO:</strong> Moderná práca so súbormi a dátami v Jave</li>
+          <li><strong>Úvod do Spring Boot:</strong> Jednoduchý vývoj webových aplikácií</li>
         </ul>
-        <p>Navrhnite tému v <a href="https://github.com/MishaSimonian/java-blog/issues" target="_blank">GitHub
-            Issues</a>!</p>
+        <p>Chcete navrhnúť tému? <a href="https://github.com/MishaSimonian/java-blog/issues" target="_blank">Navrhnite
+            tému na GitHub Issues</a>.</p>
       </section>
     </main>
   </div>
+  <style>
+    /* Try It Yourself button style */
+    .try-btn {
+      display: inline-block;
+      background: #007aff;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin: 12px 0 8px 0;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .try-btn:hover {
+      background: #005bb5;
+    }
+
+    @media (max-width: 400px) {
+      .java-svg {
+        width: 20px !important;
+        height: 20px !important;
+      }
+    }
+  </style>
+  <!--
+    Zmeny:
+    - Pridané hlavné menu .main-nav.
+    - Vylepšená štruktúra tutoriálu s podnadpismi, krokmi, kódom a tlačidlom "Vyskúšať online".
+    - Sekcia "Pripravované témy" s krátkymi popismi a odkazom na GitHub Issues.
+    - Optimalizácia Java ikony pre mobily.
+  -->
 </body>
 
 </html>
