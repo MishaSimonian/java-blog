@@ -26,14 +26,56 @@
         <a href="index_en.html">EN</a>
         <a href="index_ru.html">RU</a>
       </nav>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#tutorials">Tutorials</a> | <a href="#upcoming">Next Topics</a>
+      </nav>
     </header>
     <main>
-      <!-- Educational tutorial: Java Basics for Beginners -->
-      <!-- Content loaded from posts/en/java-basics-for-beginners.html -->
-      <!--#include file="posts/en/java-basics-for-beginners.html" -->
+      <!-- Tutorial section -->
+      <section class="post">
+        <h2 class="post-title">Java Basics for Beginners</h2>
+        <p class="post-desc">An introduction to the fundamentals of Java programming for new developers.</p>
+        <div class="tutorial-content">
+          <h3>What is Java?</h3>
+          <p>Java is a popular programming language used for building apps, websites, and more. It’s known for its
+            simplicity and reliability.</p>
+
+          <h3>Setting Up Java</h3>
+          <p>To start, download and install the JDK (Java Development Kit) from the official website. Follow these
+            steps:</p>
+          <ul>
+            <li>Visit <a href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank">Oracle
+                JDK</a>.</li>
+            <li>Choose the version for your OS (Windows, Mac, Linux).</li>
+            <li>Install and set the JAVA_HOME environment variable.</li>
+          </ul>
+
+          <h3>Your First Program</h3>
+          <p>Here’s a simple “Hello World” example:</p>
+          <pre><code>
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+      </code></pre>
+          <p><strong>Tip:</strong> Start with small programs to build confidence. Try it on <a
+              href="https://www.jdoodle.com/online-java-compiler/" target="_blank">JDoodle</a>!</p>
+        </div>
+        <p class="post-date">Published: June 12, 2025</p>
+      </section>
+
       <!-- Upcoming Topics section -->
-      <!-- Content loaded from posts/en/upcoming-topics.html -->
-      <!--#include file="posts/en/upcoming-topics.html" -->
+      <section class="post">
+        <h2 class="post-title">Upcoming Topics</h2>
+        <ul>
+          <li>Java Collections: Managing data with lists and maps.</li>
+          <li>NIO Basics: Working with files and I/O.</li>
+          <li>Introduction to Spring Boot: Building web apps.</li>
+        </ul>
+        <p>Suggest your topic in the <a href="https://github.com/MishaSimonian/java-blog/issues" target="_blank">GitHub
+            Issues</a>!</p>
+      </section>
     </main>
   </div>
 </body>

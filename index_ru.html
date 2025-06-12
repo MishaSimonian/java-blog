@@ -22,14 +22,52 @@
         <a href="index_en.html">EN</a>
         <a href="index_ru.html">RU</a>
       </nav>
+      <nav class="main-nav" aria-label="Главная навигация">
+        <a href="#tutorials">Уроки</a> | <a href="#upcoming">Следующие темы</a>
+      </nav>
     </header>
     <main>
-      <!-- Образовательный туториал: Основы Java для начинающих -->
-      <!-- Content loaded from posts/ru/osnovy-java-dlya-nachinayushchikh.html -->
-      <!--#include file="posts/ru/osnovy-java-dlya-nachinayushchikh.html" -->
+      <!-- Раздел: Туториал -->
+      <section class="post">
+        <h2 class="post-title">Основы Java для начинающих</h2>
+        <p class="post-desc">Введение в основы программирования на Java для новых разработчиков.</p>
+        <div class="tutorial-content">
+          <h3>Что такое Java?</h3>
+          <p>Java — популярный язык программирования для создания приложений, сайтов и многого другого. Он известен
+            своей простотой и надежностью.</p>
+          <h3>Установка Java</h3>
+          <p>Для начала скачайте и установите JDK (Java Development Kit) с официального сайта. Шаги:</p>
+          <ul>
+            <li>Перейдите на <a href="https://www.oracle.com/java/technologies/javase-downloads.html"
+                target="_blank">Oracle JDK</a>.</li>
+            <li>Выберите версию для вашей ОС (Windows, Mac, Linux).</li>
+            <li>Установите и настройте переменную среды JAVA_HOME.</li>
+          </ul>
+          <h3>Ваша первая программа</h3>
+          <p>Вот простой пример "Hello World" на Java:</p>
+          <pre><code>
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+          </code></pre>
+          <p><strong>Совет:</strong> Начинайте с небольших программ для уверенности. Попробуйте на <a
+              href="https://www.jdoodle.com/online-java-compiler/" target="_blank">JDoodle</a>!</p>
+        </div>
+        <p class="post-date">Опубликовано: 12 июня 2025</p>
+      </section>
       <!-- Раздел: Предстоящие темы -->
-      <!-- Content loaded from posts/ru/predstoyashchie-temy.html -->
-      <!--#include file="posts/ru/predstoyashchie-temy.html" -->
+      <section class="post">
+        <h2 class="post-title">Предстоящие темы</h2>
+        <ul>
+          <li>Java Collections: Работа с данными в списках и отображениях.</li>
+          <li>Основы NIO: Работа с файлами и вводом/выводом.</li>
+          <li>Введение в Spring Boot: Создание веб-приложений.</li>
+        </ul>
+        <p>Предложите свою тему в <a href="https://github.com/MishaSimonian/java-blog/issues" target="_blank">GitHub
+            Issues</a>!</p>
+      </section>
     </main>
   </div>
 </body>

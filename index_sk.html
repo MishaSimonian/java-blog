@@ -22,14 +22,52 @@
         <a href="index_en.html">EN</a>
         <a href="index_ru.html">RU</a>
       </nav>
+      <nav class="main-nav" aria-label="Hlavná navigácia">
+        <a href="#tutorials">Tutoriály</a> | <a href="#upcoming">Ďalšie témy</a>
+      </nav>
     </header>
     <main>
-      <!-- Vzdelávací tutoriál: Základy Javy pre začiatočníkov -->
-      <!-- Content loaded from posts/sk/zaklady-javy-pre-zaciatocnikov.html -->
-      <!--#include file="posts/sk/zaklady-javy-pre-zaciatocnikov.html" -->
+      <!-- Tutoriál -->
+      <section class="post">
+        <h2 class="post-title">Základy Javy pre začiatočníkov</h2>
+        <p class="post-desc">Úvod do základov programovania v Jave pre nových vývojárov.</p>
+        <div class="tutorial-content">
+          <h3>Čo je Java?</h3>
+          <p>Java je populárny programovací jazyk používaný na tvorbu aplikácií, webov a ďalších riešení. Je známy
+            svojou jednoduchosťou a spoľahlivosťou.</p>
+          <h3>Inštalácia Javy</h3>
+          <p>Začnite stiahnutím a inštaláciou JDK (Java Development Kit) z oficiálnej stránky. Postupujte takto:</p>
+          <ul>
+            <li>Navštívte <a href="https://www.oracle.com/java/technologies/javase-downloads.html"
+                target="_blank">Oracle JDK</a>.</li>
+            <li>Vyberte verziu pre váš operačný systém (Windows, Mac, Linux).</li>
+            <li>Nainštalujte a nastavte premennú prostredia JAVA_HOME.</li>
+          </ul>
+          <h3>Váš prvý program</h3>
+          <p>Tu je jednoduchý príklad „Hello World“ v Jave:</p>
+          <pre><code>
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+          </code></pre>
+          <p><strong>Tip:</strong> Začnite s malými programami, aby ste získali istotu. Vyskúšajte si to na <a
+              href="https://www.jdoodle.com/online-java-compiler/" target="_blank">JDoodle</a>!</p>
+        </div>
+        <p class="post-date">Publikované: 12. jún 2025</p>
+      </section>
       <!-- Sekcia: Pripravované témy -->
-      <!-- Content loaded from posts/sk/pripravovane-temy.html -->
-      <!--#include file="posts/sk/pripravovane-temy.html" -->
+      <section class="post">
+        <h2 class="post-title">Pripravované témy</h2>
+        <ul>
+          <li>Java Collections: Práca s dátami v zoznamoch a mapách.</li>
+          <li>Základy NIO: Práca so súbormi a vstupom/výstupom.</li>
+          <li>Úvod do Spring Boot: Tvorba webových aplikácií.</li>
+        </ul>
+        <p>Navrhnite tému v <a href="https://github.com/MishaSimonian/java-blog/issues" target="_blank">GitHub
+            Issues</a>!</p>
+      </section>
     </main>
   </div>
 </body>
